@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   only_z.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 21:38:40 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/07 22:10:07 by reginanuree      ###   ########.fr       */
+/*   Created: 2019/10/07 22:11:06 by reginanuree       #+#    #+#             */
+/*   Updated: 2019/10/07 22:11:08 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+int	main(void)
 {
-    int i;
-    i = '0';
-    while(i <= '9')
-    {
-        write(1,&i,1);
-        i++;
-    }
-}
-int main()
-{
-    ft_print_numbers();
-    return(0);
+	write(1, "z", 1);
+	return (0);
 }

@@ -6,11 +6,12 @@
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 21:39:18 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/07 21:39:19 by reginanuree      ###   ########.fr       */
+/*   Updated: 2019/10/07 22:10:20 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
 int main(int argc, char **argv)
 {
 	int i;
