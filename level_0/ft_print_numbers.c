@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_last_param.c                                   :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 21:39:26 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/07 21:39:27 by reginanuree      ###   ########.fr       */
+/*   Created: 2019/10/07 21:38:40 by reginanuree       #+#    #+#             */
+/*   Updated: 2019/10/07 21:45:30 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-int main(int argc,char **argv)
+void	ft_print_numbers(void)
 {
-	int i;
-	int n;
-	i = 0;
-	n = argc -1;
-	if (argc >=2)
-	{
-		while(argv[n][i])
-		{
-			write(1,&argv[n][i],1);
-			i++;
-		}
-	}
-	write(1,"\n",1);
-	return(0);
+    int i;
+    i = '0';
+    while(i <= '9')
+    {
+        write(1,&i,1);
+        i++;
+    }
+}
+int main()
+{
+    ft_print_numbers();
+    return(0);
 }

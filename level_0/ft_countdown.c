@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_last_param.c                                   :+:      :+:    :+:   */
+/*   ft_countdown.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 21:39:26 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/07 21:39:27 by reginanuree      ###   ########.fr       */
+/*   Created: 2019/10/07 21:41:18 by reginanuree       #+#    #+#             */
+/*   Updated: 2019/10/07 21:41:19 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-int main(int argc,char **argv)
+int main()
 {
-	int i;
-	int n;
-	i = 0;
-	n = argc -1;
-	if (argc >=2)
-	{
-		while(argv[n][i])
-		{
-			write(1,&argv[n][i],1);
-			i++;
-		}
-	}
-	write(1,"\n",1);
-	return(0);
+    int i;
+    i = '9';
+    while(i >='0')
+    {
+        write(1,&i,1);
+        i--;
+    }
+    write(1,"\n",1);
+    return(0);
 }
