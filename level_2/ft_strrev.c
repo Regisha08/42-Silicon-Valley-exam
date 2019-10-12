@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/10 15:57:04 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/12 12:24:37 by reginanuree      ###   ########.fr       */
+/*   Created: 2019/10/11 10:55:40 by reginanuree       #+#    #+#             */
+/*   Updated: 2019/10/11 11:44:39 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
-//------
-char	*ft_strpbrk(const char *s1, const char *s2)
+
+char    *ft_strrev(char *str)
 {
     int i;
-    // int j;
-    // j = 0;
+    int j;
+    int len;
+    char s;
     i = 0;
-    while (*s1)
+    j =  0;
+    len = 0;
+    while(str[len])
+        len++;
+    len--;
+    while(i <= len/2+1)
     {
-        i = 0;
-        while (*s2)
-        {
-            if (*s1 != s2[i])
-                i++; 
-            else
-                return((char*)s1);          
-        }
-        s1++;
+        s = str[i];
+        str[i] =str[len];
+        str[len]= s;
+        i++;
+        len--;
     }
-    return((char*)s1);
-}
+    return(str);
+} 
 int main()
 {
-    char a[10] = "ewq";
-    char d[10] = "ws";
-   
-    printf("%s\n",ft_strpbrk(a,d));
-    printf("%s\n",strpbrk(a,d));
+    char d[8]= "zosn";
+    printf("%s\n",ft_strrev(d));
     return(0);
 }

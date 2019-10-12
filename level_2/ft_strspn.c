@@ -1,44 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/10 15:57:04 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/12 12:24:37 by reginanuree      ###   ########.fr       */
+/*   Created: 2019/10/11 11:44:31 by reginanuree       #+#    #+#             */
+/*   Updated: 2019/10/12 12:24:51 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-//------
-char	*ft_strpbrk(const char *s1, const char *s2)
+///---------
+size_t	ft_strspn(const char *s, const char *accept)
 {
     int i;
-    // int j;
-    // j = 0;
+    int j;
+    j = 0;
     i = 0;
-    while (*s1)
-    {
-        i = 0;
-        while (*s2)
-        {
-            if (*s1 != s2[i])
-                i++; 
-            else
-                return((char*)s1);          
-        }
-        s1++;
-    }
-    return((char*)s1);
+    while (s[i])
+   
+    return(i);
 }
 int main()
 {
-    char a[10] = "ewq";
-    char d[10] = "ws";
-   
-    printf("%s\n",ft_strpbrk(a,d));
-    printf("%s\n",strpbrk(a,d));
+    char a[10] = "234";
+    char d[10] = "342";
+    printf("%zu\n",ft_strspn(a,d));
+    printf("%lu\n",strspn(a,d));
     return(0);
 }

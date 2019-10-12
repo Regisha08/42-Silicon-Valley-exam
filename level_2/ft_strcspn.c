@@ -6,7 +6,7 @@
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:07:54 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/10 15:44:35 by reginanuree      ###   ########.fr       */
+/*   Updated: 2019/10/12 12:24:02 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ size_t	ft_strcspn(const char *s, const char *reject)
 }
 int main()
 {
-    char a[10] = "";
-    char d[10] = "";
+    char a[10] = "dfg";
+    char d[10] = "g";
     printf("%zu\n",ft_strcspn(a,d));
     printf("%lu\n",strcspn(a,d));
     return(0);
