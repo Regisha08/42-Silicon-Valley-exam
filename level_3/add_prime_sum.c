@@ -6,7 +6,9 @@
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 11:27:47 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/14 11:27:48 by reginanuree      ###   ########.fr       */
+/*   Updated: 2019/10/14 18:36:24 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+#include <stdio.h>
