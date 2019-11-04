@@ -6,7 +6,7 @@
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/17 22:24:49 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/18 10:19:17 by reginanuree      ###   ########.fr       */
+/*   Updated: 2019/11/04 14:41:59 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_itoa(int nbr)
         r[0]= '-';
         nbr= nbr*-1;
     }
+    else if (nbr == 0)
+        r[0] = '0';
     while(nbr>0)
     {
         r[len] = '0' +(nbr%10);
@@ -52,7 +54,7 @@ char	*ft_itoa(int nbr)
 int main()
 {
     int t;
-    t = -56;
+    t = 0;
     printf("%s\n",ft_itoa(t));
     return(0);
 }
