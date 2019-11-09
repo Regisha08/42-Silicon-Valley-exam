@@ -6,7 +6,7 @@
 /*   By: reginanureeva <reginanureeva@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 19:24:23 by reginanuree       #+#    #+#             */
-/*   Updated: 2019/10/15 10:52:34 by reginanuree      ###   ########.fr       */
+/*   Updated: 2019/11/08 16:02:49 by reginanuree      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi_base(const char *str, int str_base)
     res = 0;
     sing = 1;
     strk = str_base;
-    
+
     if (*str == ' ' || *str == '\t')
         str++;
     if (*str == '-')
@@ -63,4 +63,29 @@ int main()
 {
     char g[] = "1a";
     printf("%d\n",ft_atoi_base(g, 10));
+}
+
+int	ft_atoi_base(const char *str, int str_base)
+{
+	int res;
+	res = 0;
+
+  	int sign;
+    sign = 1;
+    if (*str == '-')
+    {
+        sign = -1;
+        str++;
+    }
+    while(*str){
+        res *= str_base;
+        if (*str>='0' && *str<='9')
+		res+=*str - '0';
+        if (*str>='a' && *str<='f')
+		res+=*str - 'a' +10;
+        if (*str>='A' && *str<='F')
+		res+=*str - 'A' +10;
+        ++str;
+    }
+    return (sign*res);
 }
